@@ -179,3 +179,7 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/pycharm,angular,pycharm+all
+# Default ignored files
+/workspace.xml
+# Default ignored files
+/workspace.xml
