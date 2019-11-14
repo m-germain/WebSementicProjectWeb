@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,13 @@ export class ServicesService {
     return this.httpClient.get(this.API_URL);
   }
 
-  getRecetteList() {
-    return this.httpClient.get(this.API_URL + 'recette');
-  }
+  getRecetteList(parameters): Observable<any>{
+    // Initialize Params Object
+    let params = new HttpParams();
+    // Begin assigning parameters
+    params = params.append('firstParameter', parameters.valueOne);
+    params = params.append('secondParameter', parameters.valueTwo);
 
+    return this.httpClient.get(this.API_URL + 'recette', {params: params});
+  }
 }

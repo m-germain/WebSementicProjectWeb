@@ -1,0 +1,34 @@
+<link rel="icon" type="image/x-icon" href="favicon.png" />
+
+<div class="card mb-3" style="max-width: 100%; z-index: 1000" >
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="infoRecette.imgUrl" class="card-img" [alt]="'img_' + infoRecette.name">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="row justify-content-between">
+          <div class="col">
+            <h5 class="card-title">{{this.infoRecette.name}}</h5>
+          </div>
+          <div class="col text-right">
+            {{this.infoRecette.note}}
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <p class="card-text" style="max-height: 78px; overflow: hidden">{{this.infoRecette.desciption}}</p>
+
+         <div class="row justify-content-around">
+          <div class="col"><small class="text-muted">{{this.infoRecette.cookTime}} Min </small></div>
+          <div class="col text-right">
+            {{this.infoRecette.dificulty}}
+            <i class="fa fa-blender" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
