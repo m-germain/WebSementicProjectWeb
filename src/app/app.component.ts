@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
-
 @Component({
-  selector: 'app-root',
+  selector: 'Khooky-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Khooky';
+  title = 'Test';
 }

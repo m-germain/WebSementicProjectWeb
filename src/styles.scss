@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* You can add global styles to this file, and also import other style files */
+body,html{
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    //overflow: hidden;
+    background: dodgerblue !important;
+  }
+  
+  *{
+      margin: 0px;
+      padding: 0px;
+  }
+  
