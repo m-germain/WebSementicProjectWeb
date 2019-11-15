@@ -6,10 +6,10 @@ import { Subject } from 'rxjs';
 })
 export class LoadingScreenService {
 
-  private _loading: boolean = false;
-  loadingStatus: Subject = new Subject();
+  private _loading = false;
+  loadingStatus: Subject<any> = new Subject();
 
-  get loading():boolean {
+  get loading(): boolean {
     return this._loading;
   }
 
