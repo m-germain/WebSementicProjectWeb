@@ -1,10 +1,12 @@
-.recipe-card {
-  margin-top: -200px;
-  background: white;
-  border-radius: 20px;
-
-  .container {
-    padding: 10px;
-  }
+ .heading-footer
+{
+background-size: cover;
+height: 175px; 
+-webkit-box-shadow: none; 
+box-shadow: none; 
+border: 0px; 
+border-radius: 0px; 
 }
 
+nav ul{height:200px;}
+nav ul{overflow:hidden; overflow-y:scroll;}

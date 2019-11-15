@@ -1,11 +1,28 @@
-<div class="recipe-card shadow-sm" *ngIf="recette">
-    <div class="container">
-        <div class="row">
-            <div class="col"> {{recette.name}} </div>
-            <div class="col">
-                <img [src]="recette.imgUrl">
-            </div>
-        </div>
+ <div class="card rounded-top border-0" style="margin-top: -200px" *ngIf="recette">
+    <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': getUrl()}">
     </div>
+     <div class="card-body">
+         <div class="row title justify-content-center font-weight-bold bg-white rounded-top" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
+            <h3>{{recette.name}}</h3>
+        </div>
+         <div>
+            <p>
+                {{recette.description}}
+            </p>
+         </div>
 
+         <div class="row justify-content-between">
+             <div class="col">
+                 <h4>Ingredients :</h4>
+                 <div class="pl-3" style="height: 230px; overflow: scroll; z-index: 2000">
+                    <ul *ngFor="let ingredient of recette.ingredients"> <li>{{ingredient.ingredient}}</li></ul>
+                 </div>
+             </div>
+             <div class="col p-4">
+                <img src="{{recette.imgUrl}}" style="max-height: 250px; width: 300px">
+             </div>
+         </div>
+
+     </div>
 </div>
+
