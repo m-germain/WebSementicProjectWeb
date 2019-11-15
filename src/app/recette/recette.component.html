@@ -1,11 +1,11 @@
- <div class="card rounded-top border-0" style="margin-top: -200px" *ngIf="recette">
+ <div class="card rounded-top border-0 shadow" style="margin-top: -200px" *ngIf="recette">
     <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': getUrl()}">
     </div>
      <div class="card-body">
-         <div class="row title justify-content-center font-weight-bold bg-white rounded-top" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
+         <div class="row title justify-content-center font-weight-bold bg-white rounded-top p-2" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
             <h3>{{recette.name}}</h3>
         </div>
-         <div>
+         <div class="p-1">
             <p>
                 {{recette.description}}
             </p>
@@ -14,7 +14,7 @@
          <div class="row justify-content-between">
              <div class="col">
                  <h4>Ingredients :</h4>
-                 <div class="pl-3" style="height: 230px; overflow: scroll; z-index: 2000">
+                 <div class="pl-3" style="height: 230px; overflow: scroll;">
                     <ul *ngFor="let ingredient of recette.ingredients"> <li>{{ingredient.ingredient}}</li></ul>
                  </div>
              </div>

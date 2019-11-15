@@ -10,7 +10,9 @@ import { CardComponent } from './card/card.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
+import {LoadingScreenInterceptor} from './loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     SearchComponent,
     NavBarComponent,
     RecetteComponent,
-    CardComponent
+    CardComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,13 @@ import {HttpClientModule} from '@angular/common/http';
     CollapseModule.forRoot(),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+      {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingScreenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
