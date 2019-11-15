@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {InfoRecipe} from "../models/info-recipe";
+import {Recipe} from "../models/recipe";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
 
-  API_URL: string = '127.0.0.1:5000/';
+   API_URL: string =  'http://127.0.0.1:5000/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -15,13 +17,17 @@ export class ServicesService {
     return this.httpClient.get(this.API_URL);
   }
 
-  getRecetteList(parameters): Observable<any>{
+  getRecetteList(): Observable<any> {
     // Initialize Params Object
-    let params = new HttpParams();
+    //let params = new HttpParams();
     // Begin assigning parameters
-    params = params.append('firstParameter', parameters.valueOne);
-    params = params.append('secondParameter', parameters.valueTwo);
+    //params = params.append('firstParameter', parameters.valueOne);
+    //params = params.append('secondParameter', parameters.valueTwo);
 
-    return this.httpClient.get(this.API_URL + 'recette', {params: params});
+    return this.httpClient.get(this.API_URL + 'listRecette');
+  }
+
+  getRecette(name): Observable<Recipe> {
+    return this.httpClient.get<Recipe>(this.API_URL + 'recette', {params: {name: name.toString()}});
   }
 }

@@ -8,6 +8,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RecetteComponent } from './recette/recette.component';
 import { CardComponent } from './card/card.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollapseModule } from 'ngx-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    CollapseModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

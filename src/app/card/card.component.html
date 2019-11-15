@@ -1,6 +1,6 @@
 <link rel="icon" type="image/x-icon" href="favicon.png" />
 
-<div class="card mb-3" style="max-width: 100%; z-index: 1000" >
+<div class="card mb-3" style="max-width: 100%; z-index: 1000" (click)="router.navigateByUrl('/recette/'+ infoRecette.linkName)">
   <div class="row no-gutters">
     <div class="col-md-4">
       <img [src]="infoRecette.imgUrl" class="card-img" [alt]="'img_' + infoRecette.name">
@@ -17,14 +17,10 @@
           </div>
         </div>
 
-        <p class="card-text" style="max-height: 78px; overflow: hidden">{{this.infoRecette.desciption}}</p>
+        <p class="card-text" style="max-height: 78px; overflow: hidden">{{this.infoRecette.description}}</p>
 
-         <div class="row justify-content-around">
-          <div class="col"><small class="text-muted">{{this.infoRecette.cookTime}} Min </small></div>
-          <div class="col text-right">
-            {{this.infoRecette.dificulty}}
-            <i class="fa fa-blender" aria-hidden="true"></i>
-          </div>
+         <div class="row align-bottom">
+          <div class="col text-left"><small class="text-muted">{{this.infoRecette.cookTime}} Min </small></div>
         </div>
       </div>
     </div>

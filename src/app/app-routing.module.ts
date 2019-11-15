@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '', component: SearchComponent
   },
   {
-    path: 'recette', component: RecetteComponent
+    path: 'recette/:name', component: RecetteComponent
   },
   { 
     path: '**', redirectTo: '' 
