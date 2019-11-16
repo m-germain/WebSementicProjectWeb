@@ -23,6 +23,8 @@ export class SearchComponent implements OnInit {
 
   search(input) {
     this.inputValue = input
+    // reset list
+    this.listRecettes = new Array<InfoRecipe>();
     this.serveur.getRecetteList(this.inputValue).subscribe( json => json.list_recette.map(recette => this.listRecettes.push(recette) ));
   }
 }
