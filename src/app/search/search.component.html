@@ -3,13 +3,12 @@
 
 <div class="d-flex justify-content-center" style="margin-top: -200px;">
   <div class="searchbar shadow-sm" [ngClass]="{'hover':isCollapsed}" (mouseover)="mouseOverSearch = false" (mouseleave)="mouseOverSearch = true">
-    <input class="search_input" type="text" name="" placeholder="Search...">
+    <input class="search_input" #input type="text" name="" placeholder="Search...">
     <a class="search_icon" (click)="isCollapsed = !isCollapsed"
         [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fas fa-filter"></i></a>
-      <a class="search_icon" (click)="search()"><i class="fas fa-search"></i></a>
+      <a class="search_icon" (click)="search(input.value)"><i class="fas fa-search"></i></a>
   </div>
 </div>
-
 
 <div *ngFor="let recette of this.listRecettes" style="margin-top: 30px">
      <Khooky-card [infoRecette]="recette"></Khooky-card>

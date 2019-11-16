@@ -17,14 +17,14 @@ export class ServicesService {
     return this.httpClient.get(this.API_URL);
   }
 
-  getRecetteList(): Observable<any> {
+  getRecetteList(keywords): Observable<any> {
     // Initialize Params Object
     //let params = new HttpParams();
     // Begin assigning parameters
     //params = params.append('firstParameter', parameters.valueOne);
     //params = params.append('secondParameter', parameters.valueTwo);
 
-    return this.httpClient.get(this.API_URL + 'listRecette');
+    return this.httpClient.get(this.API_URL + 'listRecette', {params: {keywords: keywords.toString()}});
   }
 
   getRecette(name): Observable<Recipe> {

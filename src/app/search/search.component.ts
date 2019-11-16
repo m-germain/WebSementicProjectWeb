@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   isCollapsed = false;
   listRecettes: InfoRecipe[];
   mouseOverSearch: false;
+  inputValue;
 
   constructor(private serveur: ServicesService) { }
 
@@ -20,7 +21,8 @@ export class SearchComponent implements OnInit {
     this.listRecettes = new Array<InfoRecipe>();
   }
 
-  search() {
-    this.serveur.getRecetteList().subscribe( json => json.list_recette.map(recette => this.listRecettes.push(recette) ));
+  search(input) {
+    this.inputValue = input
+    this.serveur.getRecetteList(this.inputValue).subscribe( json => json.list_recette.map(recette => this.listRecettes.push(recette) ));
   }
 }
