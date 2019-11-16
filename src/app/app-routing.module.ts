@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { RecetteComponent } from './recette/recette.component';
+import { GlossaireComponent } from './glossaire/glossaire.component';
 
 
 const routes: Routes = [
@@ -11,8 +12,11 @@ const routes: Routes = [
   {
     path: 'recette/:name', component: RecetteComponent
   },
-  { 
-    path: '**', redirectTo: '' 
+  {
+    path: 'glossaire/:ingredient', component: GlossaireComponent
+  },
+  {
+    path: '**', redirectTo: ''
   },
 ];
 

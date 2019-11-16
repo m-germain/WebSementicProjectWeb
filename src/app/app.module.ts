@@ -13,6 +13,7 @@ import { CollapseModule } from 'ngx-bootstrap';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 import {LoadingScreenInterceptor} from './loading.interceptor';
+import {GlossaireComponent} from "./glossaire/glossaire.component";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {LoadingScreenInterceptor} from './loading.interceptor';
     SearchComponent,
     NavBarComponent,
     RecetteComponent,
+    GlossaireComponent,
     CardComponent,
     LoadingScreenComponent
   ],

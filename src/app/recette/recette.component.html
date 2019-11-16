@@ -15,7 +15,10 @@
              <div class="col">
                  <h4>Ingredients :</h4>
                  <div class="pl-3" style="height: 230px; overflow: scroll;">
-                    <ul *ngFor="let ingredient of recette.ingredients"> <li>{{ingredient.ingredient}}</li></ul>
+                    <ul *ngFor="let ingredient of recette.ingredients">
+                        <li *ngIf="ingredient.url"><a href="{{ingredient.url}}">{{ingredient.ingredient}}</a></li>
+                        <li *ngIf="!(ingredient.url)">{{ingredient.ingredient}}</li>
+                    </ul>
                  </div>
              </div>
              <div class="col p-4">
