@@ -1,18 +1,18 @@
 <div class="card rounded-top border-0 shadow" style="margin-top: -200px" >
-    <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': 'url(http://www.fondation-louisbonduelle.org/wp-content/uploads/2016/09/oignons_266332727-e1477390579299.png)'}">
+    <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': getUrl()}">
     </div>
      <div class="row title justify-content-center font-weight-bold bg-white rounded-top p-2" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
-         <h3>Page du {{ingredient}}</h3>
+         <h3>{{ingredient}}</h3>
      </div>
     <br>
-    <div class="row justify-content-between" *ngIf="ingredient == 'onion'">
+    <div class="row justify-content-between" >
         <div class="col">
             <p>
-                L'oignon ou ognon(Allium cepa), prononcé /ɔ.ɲɔ̃/, est une espèce de plantes herbacées bisannuelles de la famille des Amaryllidaceae, largement et depuis longtemps cultivée comme plante potagère pour ses bulbes de saveur et d'odeur fortes ou pour ses feuilles. Le terme désigne aussi le bulbe de cette plante récolté comme légume. Par extension, il désigne parfois familièrement en jardinage les bulbes d'autres plantes, généralement non comestibles (par exemple : oignon de tulipe).
+                {{infosIngredient.desc}}
             </p>
          </div>
         <div class="col p-4">
-            <img src="http://www.fondation-louisbonduelle.org/wp-content/uploads/2016/09/oignons_266332727-e1477390579299.png" style="max-height: 250px; width: 300px">
+            <img src="{{infosIngredient.img}}" style="max-height: 250px; width: 300px">
         </div>
     </div>
 </div>

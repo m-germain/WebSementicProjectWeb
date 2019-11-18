@@ -30,4 +30,8 @@ export class ServicesService {
   getRecette(name): Observable<Recipe> {
     return this.httpClient.get<Recipe>(this.API_URL + 'recette', {params: {name: name.toString()}});
   }
+
+  getInfosIngredient(ingredient): Observable<any> {
+    return this.httpClient.get(this.API_URL + 'infosingredients', {params: {ingredient: ingredient.toString()}});
+  }
 }
