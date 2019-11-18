@@ -10,4 +10,5 @@ export class Recipe {
 
 export class Ingredient {
     ingredient: string;
+    url: string;
 }

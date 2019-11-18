@@ -2,11 +2,49 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <div class="d-flex justify-content-center" style="margin-top: -200px;">
-  <div class="searchbar shadow-sm" [ngClass]="{'hover':isCollapsed}" (mouseover)="mouseOverSearch = false" (mouseleave)="mouseOverSearch = true">
+  <div class="searchbar shadow-sm">
     <input class="search_input" #input type="text" name="" placeholder="Search...">
     <a class="search_icon" (click)="isCollapsed = !isCollapsed"
         [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fas fa-filter"></i></a>
-      <a class="search_icon" (click)="search(input.value)"><i class="fas fa-search"></i></a>
+    <a class="search_icon"  (click)="search(input.value)"><i class="fas fa-search"></i></a>
+    <div id="collapseBasic" class="filter shadow-sm" [ngbCollapse]="isCollapsed">
+          Options :
+          <div class="row">
+            <div class="col">
+              <div>
+                <label class="p-1" for="ingredients">Ingredients :</label>
+                <input type="checkbox" id="ingredients" name="Ingredients"
+                       unchecked>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <label class="p-1" for="cuisine">Cuisine Type :</label>
+                <input type="checkbox" id="cuisine" name="cuisine"
+                       unchecked>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <label class="p-1" for="note">Note :</label>
+                <input type="checkbox" id="note" name="note"
+                       unchecked>
+              </div>
+            </div>
+          </div>
+          <div>
+
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row justify-content-center">
+  <div  class="col text-center" style="margin-top: 30px" *ngIf="isSubmited && listRecettes.length == 0">
+    No results for your query. Try again.
   </div>
 </div>
 

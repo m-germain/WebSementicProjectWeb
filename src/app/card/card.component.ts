@@ -17,5 +17,4 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     console.log(this.infoRecette);
   }
-  // this.router.navigateByUrl('/recette/'+ this.infoRecette.linkName)
 }

@@ -3,7 +3,7 @@ export class InfoRecipe {
     linkName: string;
     description: string;
     imgUrl: string;
-    cookTime: any;
+    totalTime: any;
     note: string;
 
     constructor() {}

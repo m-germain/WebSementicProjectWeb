@@ -23,6 +23,25 @@
   transition: width 0.4s linear;
 }
 
+.filter{
+  width: 0;
+  background: white;
+  overflow: hidden;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 0;
+  transition: width 0.4s linear;
+  transition: height 3s 3s ease-in-out;
+}
+
+.searchbar:hover > .filter{
+  padding: 0 10px;
+  width: 550px;
+  height: 100px;
+  transition: width 0.4s linear;
+  transition: height 3s 3s ease-in-out;
+}
+
 .searchbar:hover > .search_icon{
   background: white;
   color: darkorange;
@@ -38,10 +57,4 @@
   border-radius: 50%;
   color:rgb(59,158,252);
   text-decoration:none;
-}
-
-.filter{
-  border-bottom-left-radius: 30px ;
-  border-bottom-right-radius: 30px ;
-  padding: 10px;
 }

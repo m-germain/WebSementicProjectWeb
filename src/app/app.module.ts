@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { CollapseModule } from 'ngx-bootstrap';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 import {LoadingScreenInterceptor} from './loading.interceptor';
-import {GlossaireComponent} from "./glossaire/glossaire.component";
+import {GlossaireComponent} from './glossaire/glossaire.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {GlossaireComponent} from "./glossaire/glossaire.component";
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
     HttpClientModule,
+    NgbModule,
   ],
   providers: [
       {
