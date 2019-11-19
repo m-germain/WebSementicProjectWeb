@@ -25,7 +25,19 @@ export class ServicesService {
     //params = params.append('secondParameter', parameters.valueTwo);
 
     //ERROR ICI
-    let params = new HttpParams().set('keywords', search.searchBar.toString());//.set('ingredients', search.ingredient.toString()).set('cuisineType', search.cuisine.toString()).set('note', search.note); //Create new HttpParams
+    let params = new HttpParams();
+    if (search.searchBar.toString() !== '') {
+      params = params.append('keywords', search.searchBar.toString());
+    }
+    if (search.ingredient.toString() !== '') {
+      params = params.append('ingredients', search.ingredient.toString());
+    }
+    if (search.cuisine.toString() !== '') {
+      params = params.append('typeCuisine', search.cuisine.toString());
+    }
+    if (search.note.toString() !== '') {
+      params = params.append('note', search.note.toString());
+    }
     return this.httpClient.get(this.API_URL + 'listRecette', {params: params});
   }
 
