@@ -23,7 +23,9 @@ export class ServicesService {
     // Begin assigning parameters
     //params = params.append('firstParameter', parameters.valueOne);
     //params = params.append('secondParameter', parameters.valueTwo);
-    let params = new HttpParams().set('keywords', search.searchBar.toString()).set('ingredients', search.ingredient.toString()).set('cuisineType', search.cuisine.toString()).set('note', search.note); //Create new HttpParams
+
+    //ERROR ICI
+    let params = new HttpParams().set('keywords', search.searchBar.toString());//.set('ingredients', search.ingredient.toString()).set('cuisineType', search.cuisine.toString()).set('note', search.note); //Create new HttpParams
     return this.httpClient.get(this.API_URL + 'listRecette', {params: params});
   }
 
