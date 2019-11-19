@@ -15,7 +15,8 @@ export class RecetteComponent implements OnInit {
 
   ngOnInit() {
     this.serveur.getRecette(this.route.snapshot.paramMap.get('name').toString()).subscribe(
-        recette => { this.recette = recette; }
+        recette => { this.recette = recette;
+                     console.log(recette)}
     );
   }
 

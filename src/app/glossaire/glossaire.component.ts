@@ -15,7 +15,8 @@ export class GlossaireComponent implements OnInit {
     ngOnInit() {
         this.ingredient = this.route.snapshot.paramMap.get('ingredient').toString();
         this.serveur.getInfosIngredient(this.ingredient).subscribe(
-            infosIngredient => { this.infosIngredient = infosIngredient; }
+            infosIngredient => { this.infosIngredient = infosIngredient;
+                                 console.log(infosIngredient);}
         );
     }
 

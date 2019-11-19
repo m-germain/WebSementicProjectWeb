@@ -15,6 +15,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 import {LoadingScreenInterceptor} from './loading.interceptor';
 import {GlossaireComponent} from './glossaire/glossaire.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {GlossaireComponent} from './glossaire/glossaire.component';
     CollapseModule.forRoot(),
     HttpClientModule,
     NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [
       {
