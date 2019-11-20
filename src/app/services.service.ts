@@ -38,6 +38,9 @@ export class ServicesService {
     if (search.note.toString() !== '') {
       params = params.append('note', search.note.toString());
     }
+    if (search.tempDePrep.toString() !== '') {
+      params = params.append('tempDePrep', search.tempDePrep.toString());
+    }
     return this.httpClient.get(this.API_URL + 'listRecette', {params: params});
   }
 

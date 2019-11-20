@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
     ingredient: new FormControl(''),
     cuisine: new FormControl(''),
     note: new FormControl(''),
+    tempDePrep : new FormControl(''),
   });
 
   isSubmited = false;
@@ -24,6 +25,7 @@ export class SearchComponent implements OnInit {
   listRecettes: InfoRecipe[];
   mouseOverSearch: false;
   inputValue;
+  checkIngredient: boolean;
 
   constructor(private serveur: ServicesService) { }
 
