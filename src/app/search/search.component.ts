@@ -43,4 +43,5 @@ export class SearchComponent implements OnInit {
         error1 => console.log(error1)
             );
   }
+
 }

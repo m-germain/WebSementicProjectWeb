@@ -1,17 +1,18 @@
-<div class="card rounded-top border-0 shadow" style="margin-top: -200px" >
+<div class="card rounded-top border-0 shadow" style="margin-top: -230px; margin-bottom: 40px" *ngIf="ingredient" >
     <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': getUrl()}">
     </div>
      <div class="row title justify-content-center font-weight-bold bg-white rounded-top p-2" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
          <h3>{{ingredient}}</h3>
      </div>
     <br>
-    <div class="row justify-content-between" >
-        <div class="col">
+    <div class="row justify-content-between p-5" >
+        <div class="col pl-3">
+            <h4>From Wikipedia :</h4>
             <p>
                 {{infosIngredient.desc}}
             </p>
          </div>
-        <div class="col p-4">
+        <div class="col">
             <img src="{{infosIngredient.img}}" style="max-height: 250px; width: 300px">
         </div>
     </div>

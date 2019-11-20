@@ -6,6 +6,14 @@ export class Recipe {
     name: string;
     note: string;
     totalTime: string;
+    calories: string;
+    carbohydrate: string;
+    fat: string;
+    fiber: string;
+    protein: string;
+    saturatedFat: string;
+    sodium: string;
+    sugar: string;
 }
 
 export class Ingredient {

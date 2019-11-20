@@ -1,17 +1,29 @@
- <div class="card rounded-top border-0 shadow" style="margin-top: -300px" *ngIf="recette">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+<div class="card rounded-top border-0 shadow" style="margin-top: -230px; margin-bottom: 40px" *ngIf="recette">
     <div class="card-header heading-footer rounded-top" [ngStyle]="{'background-image': getUrl()}">
     </div>
      <div class="card-body">
          <div class="row title justify-content-center font-weight-bold bg-white rounded-top p-2" style="margin-top: -50px; margin-left: auto; margin-right:auto;">
             <h3>{{recette.name}}</h3>
         </div>
-         <div class="p-1">
+         <div class="row justify-content-between">
+             <div class="col" style="margin-left: 5px">
+                 <b>Cuisinie :  </b>{{recette.cuisine}}
+             </div>
+             <div class="col text-right" style="margin-right: 10px">
+                 {{recette.note}}
+                 <i class="fa fa-star" aria-hidden="true"></i>
+             </div>
+         </div>
+         <div class="p-1" style="margin-top: 12px">
             <p>
                 {{recette.description}}
             </p>
          </div>
 
-         <div class="row justify-content-between">
+         <div class="p-1 row justify-content-between">
              <div class="col">
                  <h4>Ingredients :</h4>
                  <div class="pl-3" style="height: 230px; overflow: scroll;">
@@ -26,6 +38,37 @@
              </div>
          </div>
 
+
+         <div class="row justify-content-between">
+             <div class="col-12">
+                 <h5>Nutrition: <i>per serving</i></h5>
+             </div>
+
+             <div class="col">
+                 <b>Kcal : </b> {{recette.calories}}
+             </div>
+             <div class="col">
+                 <b>Fat : </b> {{recette.fat}}
+             </div>
+             <div class="col">
+                 <b>Saturate : </b> {{recette.saturatedFat}}
+             </div>
+             <div class="col">
+                 <b>Carbs : </b> {{recette.carbohydrate}}
+             </div>
+             <div class="col">
+                 <b>Sugar : </b> {{recette.sugar}}
+             </div>
+             <div class="col">
+                 <b>Fibre : </b> {{recette.fiber}}
+             </div>
+             <div class="col">
+                 <b>Protein : </b> {{recette.protein}}
+             </div>
+             <div class="col">
+                 <b>Salt : </b> {{recette.sodium}}
+             </div>
+         </div>
      </div>
 </div>
 
