@@ -1,3 +1,11 @@
+# Project Information
+School Project in Angular, SPARQL and Python Flask.This Web Application allows you to search cooking recipes with many options using sparql queries wich are made on a [Python Back-end](https://github.com/m-germain/WebSementicProject).
+
+![Image of KhookyProject](https://media.giphy.com/media/Jpdok5rqakp3B5y2hq/giphy.gif)  
+
+## Include 
+- Search feature by : type of cuisine, rate, ingredients ( One or a list ) and Time of preparation.
+- Real time Sparql queries on the web no database.
 # Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
